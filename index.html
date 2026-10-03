@@ -1,29 +1,318 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>HireMe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HireMe — Find Your Perfect Freelancer</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b1020;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #252b40;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #6c63ff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: linear-gradient(135deg, #111936, #17122d);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #6c63ff;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #b9bfd3;
+      font-size: 18px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      margin: 8px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #6c63ff;
+      color: white;
+    }
+
+    .secondary {
+      border: 1px solid #6c63ff;
+      color: white;
+    }
+
+    section {
+      padding: 70px 8%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #151b30;
+      padding: 30px 20px;
+      border-radius: 15px;
+      border: 1px solid #272e48;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .card p {
+      color: #aeb4c7;
+    }
+
+    .icon {
+      font-size: 40px;
+    }
+
+    .how {
+      background: #10162a;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      padding: 25px;
+    }
+
+    .number {
+      background: #6c63ff;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      font-weight: bold;
+    }
+
+    .commission {
+      max-width: 700px;
+      margin: auto;
+      background: #151b30;
+      padding: 40px;
+      border-radius: 15px;
+    }
+
+    .commission strong {
+      color: #6c63ff;
+      font-size: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #252b40;
+      color: #8f96aa;
+    }
+
+    @media (max-width: 800px) {
+      .cards,
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .cards,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <h1>HireMe</h1>
-    <h2>Find the right freelancer for your project</h2>
 
-    <p>Hire editors, graphic designers, script writers and other freelancers.</p>
+  <header>
+    <div class="logo">Hire<span>Me</span></div>
 
-    <h3>Services</h3>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <ul>
-        <li>Video Editors</li>
-        <li>Graphic Designers</li>
-        <li>Script Writers</li>
-        <li>Freelancers</li>
-    </ul>
+  <section class="hero">
+    <h1>Find the Right <span>Freelancer</span></h1>
 
-    <h3>For YouTubers</h3>
-    <p>Big and small creators can find talented people to help grow their channels.</p>
+    <p>
+      Hire talented video editors, graphic designers, script writers
+      and other freelancers for your next project.
+    </p>
 
-    <button>Find a Freelancer</button>
-    <button>Join as a Freelancer</button>
+    <div class="buttons">
+      <a href="#services" class="btn primary">Find a Freelancer</a>
+      <a href="#contact" class="btn secondary">Become a Freelancer</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🎬</div>
+        <h3>Video Editors</h3>
+        <p>Find editors for YouTube videos, Shorts and social media.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>Graphic Designers</h3>
+        <p>Get thumbnails, logos, banners and other designs.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">✍️</div>
+        <h3>Script Writers</h3>
+        <p>Find writers for YouTube videos and social media content.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Other Freelancers</h3>
+        <p>Connect with talented people for different digital projects.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="how" class="how">
+    <h2>How HireMe Works</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="number">1</div>
+        <h3>Post Your Project</h3>
+        <p>Tell us what kind of freelancer you need.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">2</div>
+        <h3>Choose a Freelancer</h3>
+        <p>Find someone whose skills match your project.</p>
+      </div>
+
+      <div class="step">
+        <div class="number">3</div>
+        <h3>Get Your Work Done</h3>
+        <p>Work with your chosen freelancer and complete the project.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="commission">
+      <h2>Simple Pricing</h2>
+
+      <p>
+        HireMe plans to charge a small platform commission
+        on successful transactions.
+      </p>
+
+      <br>
+
+      <strong>5%</strong>
+
+      <p>platform commission</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Ready to Get Started?</h2>
+
+    <p>Contact HireMe and let's build something great.</p>
+
+    <div class="buttons">
+      <a href="mailto:your-email@example.com" class="btn primary">
+        Contact HireMe
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 HireMe. All rights reserved.
+  </footer>
 
 </body>
-</html>
+    </html>
